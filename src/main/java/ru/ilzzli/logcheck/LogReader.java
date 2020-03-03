@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,8 +14,6 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 public class LogReader {
-	
-	private static final Logger logger = Logger.getLogger(LogReader.class.getName());
 	
 	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy:HH:mm:ss xx");
 	private Pattern logItemPattern = Pattern.compile("^.+\\[(?<date>.+?)\\]\\s\".+\"\\s(?<code>\\d{3})\\s\\d+\\s(?<delay>\\d+\\.\\d+?)\\s.+");
